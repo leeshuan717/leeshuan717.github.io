@@ -1,36 +1,17 @@
+/* 設定整個頁面樣式 */
 body {
-    margin: 0;
-    font-family: "Noto Sans TC", sans-serif;
+    margin: 0;  /* 移除預設邊距 */
+    font-family: "Noto Sans TC", sans-serif; /* 使用 Noto Sans TC 字體 */
   }
   
+  /* 導覽列樣式 */
   .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #f8f9fa;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex; /* 讓內容橫向排列 */
+    align-items: center; /* 讓內容在垂直方向置中 */
+    justify-content: space-between; /* 讓內容左右分開對齊 */
+    background: #f8f9fa; /* 設定背景顏色 */
+    padding: 10px 20px; /* 設定內距，讓內容不會貼到邊界 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 設定陰影 */
   }
-  
-  .navbar .logo {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .navbar .nav-links {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .navbar .nav-links a {
-    text-decoration: none;
-    color: #333;
-    padding: 5px 10px;
-    transition: 0.3s;
-  }
-  
-  .navbar .nav-links a:hover {
-    background: #ddd;
-    border-radius: 5px;
-  }
+
   
