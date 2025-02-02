@@ -1,17 +1,112 @@
-/* 設定整個頁面樣式 */
+/* 🎨 全局樣式 */
 body {
-    margin: 0;  /* 移除預設邊距 */
-    font-family: "Noto Sans TC", sans-serif; /* 使用 Noto Sans TC 字體 */
+    margin: 0;
+    font-family: "Noto Sans TC", sans-serif;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 讓所有內容水平置中 */
   }
   
-  /* 導覽列樣式 */
+  /* 頂部導覽列 */
   .navbar {
-    display: flex; /* 讓內容橫向排列 */
-    align-items: center; /* 讓內容在垂直方向置中 */
-    justify-content: space-between; /* 讓內容左右分開對齊 */
-    background: #f8f9fa; /* 設定背景顏色 */
-    padding: 10px 20px; /* 設定內距，讓內容不會貼到邊界 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 設定陰影 */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-
+  
+  /* 左上角標題 - 增加左側間距 */
+  .nav-left {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px; /* 調整標題的左邊距 */
+    color: #333;
+  }
+  
+  /* 移除右上角按鈕 */
+  .nav-right {
+    display: none;
+  }
+  
+  /* 內容區域 */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    margin-top: 20px; /* 貼齊導覽列 */
+  }
+  
+  /* 左側選單 */
+  .sidebar {
+    width: 220px;
+    padding: 10px;
+    height: 100vh;
+  }
+  
+  .sidebar h2 {
+    font-size: 18px;
+    color: #6a5acd; /* 紫色 */
+    text-align: center;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .menu li {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .menu li:hover {
+    background: #e6e6fa;
+  }
+  
+  .menu .active {
+    background: #e6e6fa;
+    font-weight: bold;
+  }
+  
+  /* 主要內容區域 */
+  .content {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .content h1 {
+    font-size: 30px;
+    color: #333;
+  }
+  
+  /* Logo 置中 */
+  .logo {
+    width: 200px;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  /* 移除右側 "此頁內容" */
+  .right-menu {
+    display: none;
+  }
+  
+  /* 響應式設計 (小螢幕隱藏側邊欄) */
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
   
